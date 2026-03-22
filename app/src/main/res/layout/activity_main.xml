@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#E3F2FD"> <TextView
+        android:id="@+id/affichage_compteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#1565C0"
+        android:textSize="96sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/bouton_ajout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
+    <Button
+        android:id="@+id/bouton_ajout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#1976D2"
+        android:padding="16dp"
+        android:text="+ INCRÉMENTER"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/affichage_compteur" />
 
-        <!-- Texte affichant la valeur du compteur -->
-
-        <!-- Bouton pour afficher un Toast -->
-
-        <!-- Bouton pour incrémenter le compteur -->
-        <TextView
-            android:id="@+id/text_count"
-            android:layout_width="147dp"
-            android:layout_height="112dp"
-            android:layout_marginBottom="24dp"
-            android:text="0"
-            android:textSize="36sp" />
-
-        <Button
-            android:id="@+id/button_toast"
-            android:layout_width="152dp"
-            android:layout_height="89dp"
-            android:layout_marginBottom="12dp"
-            android:text="Afficher un message" />
-
-        <Button
-            android:id="@+id/button_count"
-            android:layout_width="148dp"
-            android:layout_height="109dp"
-            android:text="Incrémenter le compteur" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/bouton_salutation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:backgroundTint="#FFB300"
+        android:padding="16dp"
+        android:text="AFFICHER LE MESSAGE"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
